@@ -226,19 +226,19 @@ function initJoinDialog() {
       e.preventDefault();
       const submitBtn = joinForm.querySelector('button[type="submit"]');
       if (submitBtn) {
-        submitBtn.textContent = 'Transmitting Credentials...';
+        submitBtn.textContent = 'Submitting Profile...';
         submitBtn.disabled = true;
       }
 
       setTimeout(() => {
-        alert("Transmission Received! Welcome to SHIELD Cyber Society. Check your email & join our Discord channel to complete onboarding.");
+        alert("Registration recorded! Welcome to SHIELD Cyber Society. Connect with us on Discord to complete onboarding.");
         joinForm.reset();
         if (submitBtn) {
-          submitBtn.textContent = 'Submit Application';
+          submitBtn.textContent = 'Join Community';
           submitBtn.disabled = false;
         }
         dialog.close();
-      }, 1200);
+      }, 1000);
     });
   }
 }

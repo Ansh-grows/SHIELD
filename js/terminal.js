@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="term-line"><span class="cyan">about</span>       - About SHIELD Cyber Society & NIT Hamirpur</div>
 <div class="term-line"><span class="cyan">motto</span>       - Display our 4 pillars</div>
 <div class="term-line"><span class="cyan">domains</span>     - List all 8 specialized cybersecurity tracks</div>
-<div class="term-line"><span class="cyan">nmap</span>        - Scan SHIELD network infrastructure</div>
+<div class="term-line"><span class="cyan">nmap</span>        - Scan SHIELD educational network topology</div>
 <div class="term-line"><span class="cyan">ctf</span>         - Inspect current CTF cipher & challenge status</div>
-<div class="term-line"><span class="cyan">whoami</span>      - Display current session credentials</div>
+<div class="term-line"><span class="cyan">whoami</span>      - Display current recruit profile</div>
 <div class="term-line"><span class="cyan">join</span>        - Initiate society recruit sequence</div>
 <div class="term-line"><span class="cyan">banner</span>      - Display SHIELD ASCII banner</div>
 <div class="term-line"><span class="cyan">clear</span>       - Clear terminal window</div>
@@ -46,44 +46,44 @@ document.addEventListener('DOMContentLoaded', () => {
     motto: () => `
 <div class="term-line success">=== CORE PILLARS ===</div>
 <div class="term-line"><span class="cyan">[1] LEARN</span>       : Master fundamental offensive & defensive computing.</div>
-<div class="term-line"><span class="green">[2] BUILD</span>       : Architect security tools, CTF problems, and exploits.</div>
+<div class="term-line"><span class="green">[2] BUILD</span>       : Architect security tools, CTF problems, and defense labs.</div>
 <div class="term-line"><span class="amber">[3] COLLABORATE</span> : Team up for global CTFs, hackathons, and security research.</div>
-<div class="term-line"><span class="crimson">[4] DEFEND</span>      : Secure infrastructure, lead awareness, and respond to breaches.</div>
+<div class="term-line"><span class="crimson">[4] DEFEND</span>      : Secure infrastructure, lead awareness, and defend systems.</div>
 `,
     domains: () => `
 <div class="term-line success">=== 8 SPECIALIZED SECURITY DOMAINS ===</div>
 <div class="term-line"><span class="cyan">[1] Network Security</span>     : Packet analysis, firewall defense, zero-trust routing & perimeter auditing.</div>
-<div class="term-line"><span class="cyan">[2] Web App Security</span>     : OWASP Top 10, source code reviews, API fuzzing & bug bounty hunting.</div>
+<div class="term-line"><span class="cyan">[2] Web App Security</span>     : OWASP Top 10, source code reviews, API auditing & bug bounty hunting.</div>
 <div class="term-line"><span class="cyan">[3] Cryptography</span>         : Classical ciphers, RSA, ECC, lattice cryptography & cryptanalysis.</div>
 <div class="term-line"><span class="cyan">[4] Digital Forensics</span>    : Memory dump triage (Volatility), disk imaging, timeline reconstruction.</div>
-<div class="term-line"><span class="cyan">[5] Malware Analysis</span>     : Static & dynamic reverse engineering, sandbox detonation, Ghidra disassembly.</div>
-<div class="term-line"><span class="cyan">[6] Cloud Analysis</span>       : AWS/GCP IAM misconfigurations, container escape, S3 forensics & cloud posture.</div>
+<div class="term-line"><span class="cyan">[5] Malware Analysis</span>     : Static & dynamic reverse engineering, sandbox analysis, Ghidra disassembly.</div>
+<div class="term-line"><span class="cyan">[6] Cloud Analysis</span>       : AWS/GCP IAM configuration review, container security, cloud posture.</div>
 <div class="term-line"><span class="cyan">[7] Security Operations</span>  : SIEM telemetry, threat hunting, live blue-teaming & incident response.</div>
-<div class="term-line"><span class="cyan">[8] Offensive Security</span>   : Red teaming, Active Directory exploitation, privilege escalation & payload crafting.</div>
+<div class="term-line"><span class="cyan">[8] Offensive Security</span>   : Red teaming, penetration testing, privilege auditing & system hardening.</div>
 `,
     nmap: () => `
-<div class="term-line">Starting Nmap 7.94 ( https://nmap.org ) at 2026-09-12 17:30 IST</div>
-<div class="term-line">Nmap scan report for shield.nith.ac.in (10.14.0.1)</div>
-<div class="term-line">Host is up (0.00042s latency).</div>
+<div class="term-line muted">[Simulated Educational Network Audit]</div>
+<div class="term-line">Educational audit report for shield.nith.ac.in (10.14.0.1)</div>
+<div class="term-line">Host status: Online (0.00042s latency).</div>
 <div class="term-line muted">PORT     STATE SERVICE       VERSION</div>
 <div class="term-line"><span class="green">22/tcp   open  ssh</span>           OpenSSH 9.6p1 (Debian)</div>
 <div class="term-line"><span class="green">80/tcp   open  http</span>          nginx/1.24.0</div>
 <div class="term-line"><span class="green">443/tcp  open  ssl/https</span>     SHIELD Gateway TLSv1.3</div>
 <div class="term-line"><span class="cyan">1337/tcp open  ctf-daemon</span>    SHIELD_CTF_ENGINE v2.4</div>
-<div class="term-line muted">Service detection performed. 0 vulnerable ports found. Perimeter secure.</div>
+<div class="term-line muted">Educational topology check completed. Perimeter secure.</div>
 `,
     ctf: () => `
 <div class="term-line success">=== LIVE CTF CHALLENGE: CRACK THE SHIELD ===</div>
 <div class="term-line">Target: Mini Crypto & Encoding puzzle below.</div>
 <div class="term-line">Encrypted Cipher: <span class="green">U0hJRUxEe2QzZjNuZF93aDR0X200dHQzcnNfbjF0aH0=</span></div>
 <div class="term-line">Hint: Check standard base representation (Base64).</div>
-<div class="term-line cyan">Submit the decoded flag in the CTF section to unlock recruit credentials!</div>
+<div class="term-line cyan">Submit the decoded flag in the CTF section to unlock your recruit badge!</div>
 `,
     whoami: () => `
-<div class="term-line"><span class="green">UID</span> : 1337 (guest_agent)</div>
+<div class="term-line"><span class="green">UID</span> : 1337 (student_cadet)</div>
 <div class="term-line"><span class="cyan">HOST</span>: terminal.shield.nith.ac.in</div>
-<div class="term-line"><span class="amber">ROLE</span>: Ethical Hacker in Training</div>
-<div class="term-line"><span class="muted">CLEARANCE</span>: Level 1 (Recruit)</div>
+<div class="term-line"><span class="amber">ROLE</span>: Student Security Researcher</div>
+<div class="term-line"><span class="muted">STATUS</span>: Active Member</div>
 `,
     join: () => {
       const dialog = document.getElementById('join-dialog');

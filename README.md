@@ -28,7 +28,7 @@ Curious about how hackers think and work? Want to explore cybersecurity beyond t
 
 ```
        [ LEARN ] ───▶ Master computer architecture, offensive TTPs, and security theory.
-       [ BUILD ] ───▶ Develop security utilities, CTF challenges, and proof-of-concept exploits.
+       [ BUILD ] ───▶ Develop security utilities, CTF challenges, and defense proofs.
  [ COLLABORATE ] ───▶ Form competitive CTF squads and exchange research with industry experts.
       [ DEFEND ] ───▶ Fortify digital infrastructures, run awareness clinics, and hunt threats.
 ```
@@ -40,13 +40,13 @@ Curious about how hackers think and work? Want to explore cybersecurity beyond t
 ## 🌐 The 8 Core Domains
 
 1. **Network Security**: Packet analysis, zero-trust network design, firewall management, and perimeter defense (`Wireshark`, `Suricata`, `TCP/IP`).
-2. **Web Application Security**: OWASP Top 10 exploitation, API vulnerability assessment, and bug bounty hunting (`Burp Suite`, `SQLMap`, `Fuzzing`).
-3. **Cryptography**: Symmetric & asymmetric cryptosystems, cryptanalysis, RSA/ECC, and hash cracking (`Hashcat`, `SageMath`, `OpenSSL`).
+2. **Web Application Security**: OWASP Top 10 mitigation, API vulnerability assessment, and bug bounty research (`Burp Suite`, `SQLMap`, `Fuzzing`).
+3. **Cryptography**: Symmetric & asymmetric cryptosystems, cryptanalysis, RSA/ECC, and hash analysis (`Hashcat`, `SageMath`, `OpenSSL`).
 4. **Digital Forensics**: Incident response, volatile memory forensics, and disk timeline reconstruction (`Volatility 3`, `Autopsy`, `FTK`).
-5. **Malware Analysis**: Static and dynamic binary disassembly, sandbox execution, and decompilation (`Ghidra`, `x64dbg`, `YARA`).
-6. **Cloud Analysis**: Cloud infrastructure auditing, container escaping, and IAM misconfiguration mitigation (`AWS/GCP`, `ScoutSuite`, `Docker/K8s`).
+5. **Malware Analysis**: Static and dynamic binary disassembly, sandbox analysis, and decompilation (`Ghidra`, `x64dbg`, `YARA`).
+6. **Cloud Analysis**: Cloud infrastructure auditing, container security, and IAM misconfiguration mitigation (`AWS/GCP`, `ScoutSuite`, `Docker/K8s`).
 7. **Security Operations (SOC)**: SIEM log correlation, intrusion detection, live threat hunting, and MITRE ATT&CK mapping (`Wazuh`, `Splunk`, `Zeek`).
-8. **Offensive Security**: Red teaming, Active Directory privilege escalation, and custom payload creation (`Metasploit`, `BloodHound`, `Mimikatz`).
+8. **Offensive Security**: Red teaming, system hardening, Active Directory audits, and penetration testing (`Penetration Testing`, `BloodHound`, `Auditing`).
 
 ---
 
