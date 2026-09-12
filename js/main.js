@@ -255,7 +255,12 @@ function initStatCounters() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const el = entry.target;
-        const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+        const target = parseInt(el.getAttribute('data-target'), 10);
+        if (isNaN(target) || target <= 0) {
+          el.textContent = 0;
+          obs.unobserve(el);
+          return;
+        }
         let current = 0;
         const step = Math.ceil(target / 45);
 
