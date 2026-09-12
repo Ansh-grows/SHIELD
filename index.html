@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  
+  <title>SHIELD Cyber Society | NIT Hamirpur - Ethical Hacking & Cyber Defense</title>
+  <meta name="description" content="SHIELD Cyber Society at NIT Hamirpur. Explore cybersecurity beyond textbooks with hands-on learning in offensive security, malware analysis, digital forensics, cryptography, and defense.">
+  <meta name="keywords" content="SHIELD, CyberSecurity, Ethical Hacking, NIT Hamirpur, InfoSec, CTF, Malware Analysis, Network Security">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/shield-logo.svg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Dynamic Cyber Canvas -->
+  <canvas id="cyber-canvas"></canvas>
+  <div class="scanlines"></div>
+
+  <div class="content-wrapper">
+    <!-- Navigation Bar -->
+    <header class="cyber-nav">
+      <div class="container nav-container">
+        <a href="#hero" class="brand-link" aria-label="SHIELD Home">
+          <div class="shield-logo-wrap">
+            <img src="assets/shield-logo.svg" alt="SHIELD Emblem" width="44" height="48">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">SHIELD</span>
+            <span class="brand-tag">NIT HAMIRPUR</span>
+          </div>
+        </a>
+
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <nav>
+          <ul class="nav-links">
+            <li class="nav-item"><a href="#about">About</a></li>
+            <li class="nav-item"><a href="#pillars">Pillars</a></li>
+            <li class="nav-item"><a href="#domains">Domains</a></li>
+            <li class="nav-item"><a href="#terminal">Terminal</a></li>
+            <li class="nav-item"><a href="#ctf">CTF Challenge</a></li>
+            <li class="nav-item"><a href="#events">Events</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#terminal" class="btn-cyber-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+            Terminal
+          </a>
+          <button class="btn-cyber-solid trigger-join-dialog">
+            Join SHIELD
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero-section">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-badge-wrap">
+                <span class="status-beacon"></span>
+                <span>NIT HAMIRPUR &bull; STUDENT CYBER DEFENSE INITIATIVE</span>
+              </div>
+
+              <h1 class="hero-title">
+                <span class="glitch-text">SHIELD CYBER SOCIETY</span>
+                <span class="tagline-highlight">Learn how hackers work. Build your skills. Defend what matters.</span>
+              </h1>
+
+              <p class="hero-description">
+                Interested in cybersecurity &amp; ethical hacking? Curious about how adversaries think, break systems, and how to engineer impregnable defenses? Step beyond textbooks with hands-on labs, real-world bug bounty research, and live CTFs.
+              </p>
+
+              <div class="hero-motto-pills">
+                <div class="motto-pill"><span>&gt;</span> LEARN</div>
+                <div class="motto-pill"><span>&gt;</span> BUILD</div>
+                <div class="motto-pill"><span>&gt;</span> COLLABORATE</div>
+                <div class="motto-pill"><span>&gt;</span> DEFEND</div>
+              </div>
+
+              <div class="hero-cta-group">
+                <button class="btn-cyber-solid trigger-join-dialog">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <line x1="20" y1="8" x2="20" y2="14"></line>
+                    <line x1="23" y1="11" x2="17" y2="11"></line>
+                  </svg>
+                  Join The Collective
+                </button>
+                <a href="#domains" class="btn-cyber-outline">
+                  Explore 8 Domains
+                </a>
+                <a href="#ctf" class="btn-cyber-outline">
+                  Crack The SHIELD CTF
+                </a>
+              </div>
+
+              <!-- Hero Telemetry Stats -->
+              <div class="hero-telemetry-bar">
+                <div class="telemetry-item">
+                  <div class="telemetry-val"><span class="count-up" data-target="450">0</span><span class="unit">+</span></div>
+                  <div class="telemetry-lbl">Active Cadets</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-val"><span class="count-up" data-target="8">0</span><span class="unit"></span></div>
+                  <div class="telemetry-lbl">Core Domains</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-val"><span class="count-up" data-target="32">0</span><span class="unit">+</span></div>
+                  <div class="telemetry-lbl">CTFs &amp; Labs</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-val"><span class="count-up" data-target="100">0</span><span class="unit">%</span></div>
+                  <div class="telemetry-lbl">Hands-On Ops</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Cyber HUD -->
+            <div class="hero-cyber-hud">
+              <div class="hud-panel">
+                <div class="hud-header">
+                  <div class="hud-dots">
+                    <span class="hud-dot red"></span>
+                    <span class="hud-dot yellow"></span>
+                    <span class="hud-dot green"></span>
+                  </div>
+                  <span class="hud-title">NODE://SHIELD-SENTINEL-01</span>
+                  <span class="hud-target">ONLINE</span>
+                </div>
+                <div class="hud-body">
+                  <div class="hud-stream">[+] <span class="cyan">AUTH_PROTOCOL:</span> SEC_LEVEL_4 (GRANTED)</div>
+                  <div class="hud-stream">[+] <span class="green">FIREWALL_STATE:</span> HEURISTIC_ACTIVE (0 DROPS)</div>
+                  <div class="hud-stream">[*] <span class="amber">THREAT_INTEL:</span> Real-time monitoring across NIT Hamirpur cyber assets.</div>
+                  <div class="hud-stream">[*] <span class="cyan">MISSION_TAG:</span> LEARN &bull; BUILD &bull; COLLABORATE &bull; DEFEND</div>
+                  <div class="hud-stream">[!] <span class="crimson">ZERO-DAY ALERT:</span> Ethical exploit analysis in progress...</div>
+
+                  <div class="hud-interactive-teaser">
+                    <div class="teaser-row">
+                      <span class="cyan">Perimeter Integrity</span>
+                      <span class="green">98.9% STABLE</span>
+                    </div>
+                    <div class="security-meter">
+                      <div class="security-meter-fill"></div>
+                    </div>
+                  </div>
+
+                  <div style="margin-top: 1.2rem; font-size: 0.78rem; color: var(--text-dim);">
+                    Tip: Scroll down to execute commands in the interactive terminal or decode the CTF cipher.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section-wrapper">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">// OUR MISSION</span>
+            <h2 class="section-title">Beyond Textbooks. Into the Matrix.</h2>
+            <p class="section-desc">
+              SHIELD Cyber Society at National Institute of Technology Hamirpur was forged to bridge the gap between theoretical computing and real-world cybersecurity warfare. We provide hands-on environments where curious minds transform into capable security researchers, defenders, and ethical hackers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 Pillars Section -->
+      <section id="pillars" class="section-wrapper" style="background: rgba(8, 14, 28, 0.45);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">// CORE FOUNDATIONS</span>
+            <h2 class="section-title">The Four SHIELD Pillars</h2>
+            <p class="section-desc">
+              Every initiative, workshop, and operation within SHIELD is powered by four uncompromising principles.
+            </p>
+          </div>
+
+          <div class="pillars-grid">
+            <!-- Pillar 1: LEARN -->
+            <div class="pillar-card learn">
+              <div class="pillar-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+              </div>
+              <div class="pillar-label">PILLAR 01</div>
+              <h3 class="pillar-name">LEARN</h3>
+              <p class="pillar-text">
+                Decode the adversary’s playbook. Dive deep into computer architecture, networking internals, cryptosystems, and modern attack vectors through peer-to-peer bootcamps.
+              </p>
+              <ul class="pillar-features">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Hands-on Linux &amp; Kernel Labs
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Offensive TTP Dissections
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Guided Security Certifications
+                </li>
+              </ul>
+            </div>
+
+            <!-- Pillar 2: BUILD -->
+            <div class="pillar-card build">
+              <div class="pillar-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div class="pillar-label">PILLAR 02</div>
+              <h3 class="pillar-name">BUILD</h3>
+              <p class="pillar-text">
+                True understanding comes from construction. We build automated fuzzers, custom CTF challenges, defense telemetry scripts, and open-source security utilities.
+              </p>
+              <ul class="pillar-features">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Custom CTF Infrastructure
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Security Tool Development
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Exploitation &amp; Defense PoCs
+                </li>
+              </ul>
+            </div>
+
+            <!-- Pillar 3: COLLABORATE -->
+            <div class="pillar-card collaborate">
+              <div class="pillar-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="pillar-label">PILLAR 03</div>
+              <h3 class="pillar-name">COLLABORATE</h3>
+              <p class="pillar-text">
+                Cybersecurity is a team sport. We assemble competitive CTF units, host cross-department hackathons, and exchange research with industry professionals and alumni.
+              </p>
+              <ul class="pillar-features">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  National &amp; Global CTF Teams
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Peer Code &amp; Vulnerability Audits
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Industry Guest Sessions
+                </li>
+              </ul>
+            </div>
+
+            <!-- Pillar 4: DEFEND -->
+            <div class="pillar-card defend">
+              <div class="pillar-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="pillar-label">PILLAR 04</div>
+              <h3 class="pillar-name">DEFEND</h3>
+              <p class="pillar-text">
+                Defend what matters. We champion digital literacy, run campus-wide security awareness clinics, help secure student projects, and develop threat hunting capabilities.
+              </p>
+              <ul class="pillar-features">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Campus Cyber Hygiene Drives
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Blue Team Live Simulations
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Responsible Disclosure Culture
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The 8 Domains Section -->
+      <section id="domains" class="section-wrapper">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">// SPECIALIZATION TRACKS</span>
+            <h2 class="section-title">The 8 Core Domains of SHIELD</h2>
+            <p class="section-desc">
+              Explore our specialized operational tracks. Whether your passion lies in dissecting malware or hunting web zero-days, SHIELD has a dedicated division for you.
+            </p>
+          </div>
+
+          <div class="domains-grid">
+            <!-- Domain 1: Network Security -->
+            <div class="domain-card">
+              <div class="domain-header">
+                <span class="domain-number">TRACK 01</span>
+                <div class="domain-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="domain-title">Network Security</h3>
+              <p class="domain-desc">
+                Packet analysis, perimeter fortification, zero-trust protocols, firewall administration, Wireshark packet capture analysis, and enterprise segmentation defense.
+              </p>
+              <div class="domain-tech-tags">
+                <span class="domain-tag">Wireshark</span>
+                <span class="domain-tag">Snort/Suricata</span>
+                <span class="domain-tag">TCP/IP Protocol</span>
+                <span class="domain-tag">Firewalls</span>
+              </div>
+            </div>
+
+            <!-- Domain 2: Web Application Security -->
+            <div class="domain-card">
+              <div class="domain-header">
+                <span class="domain-number">TRACK 02</span>
+                <div class="domain-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="domain-title">Web Application Security</h3>
+              <p class="domain-desc">
+                Dissecting modern web apps, OWASP Top 10 vulnerabilities (SQLi, XSS, CSRF, SSRF, IDOR), GraphQL &amp; REST API fuzzing, and ethical bug bounty hunting.
+              </p>
+              <div class="domain-tech-tags">
+                <span class="domain-tag">Burp Suite Pro</span>
+                <span class="domain-tag">OWASP Top 10</span>
+                <span class="domain-tag">SQLMap</span>
+                <span class="domain-tag">API Security</span>
+              </div>
+            </div>
+
+            <!-- Domain 3: Cryptography -->
+            <div class="domain-card">
+              <div class="domain-header">
+                <span class="domain-number">TRACK 03</span>
+                <div class="domain-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="domain-title">Cryptography</h3>
+              <p class="domain-desc">
+                Theoretical and applied cryptosystems. Symmetric and asymmetric encryption (AES, RSA, ECC), hash cracking, side-channel attacks, and post-quantum cryptography.
+              </p>
+              <div class="domain-tech-tags">
+                <span class="domain-tag">RSA / ECC</span>
+                <span class="domain-tag">SageMath</span>
+                <span class="domain-tag">Hashcat</span>
+                <span class="domain-tag">Cryptanalysis</span>
+              </div>
+            </div>
+
+            <!-- Domain 4: Digital Forensics -->
+            <div class="domain-card">
+              <div class="domain-header">
+                <span class="domain-number">TRACK 04</span>
+                <div class="domain-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="domain-title">Digital Forensics</h3>
+              <p class="domain-desc">
+                Cyber incident investigation, disk image carving, volatile memory dumps analysis, Windows artifact analysis, file system reconstruction, and timeline auditing.
+              </p>
+              <div class="domain-tech-tags">
+                <span class="domain-tag">Volatility 3</span>
+                <span class="domain-tag">Autopsy</span>
+                <span class="domain-tag">FTK Imager</span>
+                <span class="domain-tag">Memory Carving</span>
+              </div>
+            </div>
+
+            <!-- Domain 5: Malware Analysis -->
+            <div class="domain-card">
+              <div class="domain-header">
+                <span class="domain-number">TRACK 05</span>
+                <div class="domain-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="domain-title">Malware Analysis</h3>
+              <p class="domain-desc">
+                Static and dynamic disassembly of malicious binaries, sandbox detonation, decompilation with Ghidra and IDA Pro, x86/x64 assembly tracing, and YARA rule formulation.
+              </p>
+              <div class="domain-tech-tags">
+                <span class="domain-tag">Ghidra</span>
+                <span class="domain-tag">x64dbg / GDB</span>
+                <span class="domain-tag">YARA</span>
+                <span class="domain-tag">Cuckoo Sandbox</span>
+              </div>
+            </div>
+
+            <!-- Domain 6: Cloud Analysis -->
+            <div class="domain-card">
+              <div class="domain-header">
+                <span class="domain-number">TRACK 06</span>
+                <div class="domain-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="domain-title">Cloud Analysis</h3>
+              <p class="domain-desc">
+                Cloud infrastructure audit, AWS/Azure/GCP IAM misconfiguration hunting, Kubernetes container escape techniques, serverless security, and Cloud Trail log forensics.
+              </p>
+              <div class="domain-tech-tags">
+                <span class="domain-tag">AWS / GCP Audit</span>
+                <span class="domain-tag">ScoutSuite</span>
+                <span class="domain-tag">Docker / K8s</span>
+                <span class="domain-tag">Pacu</span>
+              </div>
+            </div>
+
+            <!-- Domain 7: Security Operations -->
+            <div class="domain-card">
+              <div class="domain-header">
+                <span class="domain-number">TRACK 07</span>
+                <div class="domain-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="domain-title">Security Operations (SOC)</h3>
+              <p class="domain-desc">
+                Blue team defenses, SIEM log correlation, real-time threat hunting, intrusion detection systems, incident response playbooks, and MITRE ATT&amp;CK mapping.
+              </p>
+              <div class="domain-tech-tags">
+                <span class="domain-tag">Wazuh SIEM</span>
+                <span class="domain-tag">Splunk</span>
+                <span class="domain-tag">Zeek</span>
+                <span class="domain-tag">MITRE ATT&amp;CK</span>
+              </div>
+            </div>
+
+            <!-- Domain 8: Offensive Security -->
+            <div class="domain-card">
+              <div class="domain-header">
+                <span class="domain-number">TRACK 08</span>
+                <div class="domain-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="domain-title">Offensive Security</h3>
+              <p class="domain-desc">
+                Red Teaming methodology, Active Directory penetration testing, custom payload crafting, privilege escalation on Linux/Windows, and physical cyber defense audits.
+              </p>
+              <div class="domain-tech-tags">
+                <span class="domain-tag">Metasploit</span>
+                <span class="domain-tag">Active Directory</span>
+                <span class="domain-tag">Mimikatz</span>
+                <span class="domain-tag">BloodHound</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Cyber Terminal Section -->
+      <section id="terminal" class="section-wrapper terminal-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">// SHIELD CLI ACCESS</span>
+            <h2 class="section-title">Interactive Defense Terminal</h2>
+            <p class="section-desc">
+              Execute direct commands into our simulated environment. Type <code style="color:var(--neon-green)">help</code> to inspect available routines or explore domains.
+            </p>
+          </div>
+
+          <div class="terminal-window">
+            <div class="terminal-bar">
+              <div class="terminal-bar-left">
+                <div class="terminal-buttons">
+                  <span class="term-btn red"></span>
+                  <span class="term-btn yellow"></span>
+                  <span class="term-btn green"></span>
+                </div>
+                <span class="term-host">guest@shield-nith: ~</span>
+              </div>
+              <span class="term-status-badge">SESSION: SECURE [TLS_1.3]</span>
+            </div>
+
+            <div id="terminal-body" class="terminal-body">
+              <div id="terminal-output" class="terminal-output">
+                <div class="term-line success">Welcome to SHIELD Defense Console [Version 2.8.4-RELEASE]</div>
+                <div class="term-line">Connected to NIT Hamirpur Student Security Hub.</div>
+                <div class="term-line muted">Type <span class="cyan">help</span> to view commands, or click any quick command chip below.</div>
+              </div>
+
+              <div class="terminal-prompt-row">
+                <span class="prompt-prefix">guest@shield-nith:~$</span>
+                <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" autofocus aria-label="Terminal input">
+              </div>
+            </div>
+
+            <div class="terminal-quick-chips">
+              <span class="quick-chip-label">Quick Commands:</span>
+              <button class="quick-chip" data-cmd="help">help</button>
+              <button class="quick-chip" data-cmd="about">about</button>
+              <button class="quick-chip" data-cmd="motto">motto</button>
+              <button class="quick-chip" data-cmd="domains">domains</button>
+              <button class="quick-chip" data-cmd="nmap">nmap</button>
+              <button class="quick-chip" data-cmd="ctf">ctf</button>
+              <button class="quick-chip" data-cmd="whoami">whoami</button>
+              <button class="quick-chip" data-cmd="banner">banner</button>
+              <button class="quick-chip" data-cmd="join">join</button>
+              <button class="quick-chip" data-cmd="clear">clear</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mini CTF Challenge: "Crack The SHIELD" -->
+      <section id="ctf" class="section-wrapper">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">// LIVE RECRUIT CHALLENGE</span>
+            <h2 class="section-title">Crack The SHIELD: Level 0</h2>
+            <p class="section-desc">
+              Test your foundational reverse-engineering and cryptography chops. Decrypt the transmitted ciphertext to claim your recruit badge!
+            </p>
+          </div>
+
+          <div class="ctf-card">
+            <div class="ctf-header-bar">
+              <div class="ctf-badge easy">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                RECON / CRYPTO CHALLENGE
+              </div>
+              <div class="ctf-points">50 PTS &bull; LEVEL 1 RECRUIT</div>
+            </div>
+
+            <div class="ctf-cipher-box">
+              <div class="cipher-label">Intercepted Transmission Cipher:</div>
+              <div class="cipher-code">U0hJRUxEe2QzZjNuZF93aDR0X200dHQzcnNfbjF0aH0=</div>
+            </div>
+
+            <div class="ctf-hint-block">
+              <strong>HINT:</strong> Notice the trailing <code>=</code> padding character. This is standard 6-bit encoding widely used across the web and CTFs. Decode it to reveal the flag format: <code>SHIELD{...}</code>
+            </div>
+
+            <form id="ctf-form" class="ctf-submission-form">
+              <input type="text" id="ctf-flag-input" class="ctf-input" placeholder="Format: SHIELD{...}" required autocomplete="off" aria-label="Enter CTF Flag">
+              <button type="submit" class="btn-cyber-solid">Submit Flag</button>
+            </form>
+
+            <div id="ctf-feedback" class="ctf-feedback"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events & Initiatives -->
+      <section id="events" class="section-wrapper" style="background: rgba(8, 14, 28, 0.45);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">// OPERATIONAL ROADMAP</span>
+            <h2 class="section-title">Events &amp; Cyber Initiatives</h2>
+            <p class="section-desc">
+              Join our weekly hack sessions, competitive workshops, and annual college flagship security competitions.
+            </p>
+          </div>
+
+          <div class="events-timeline">
+            <!-- Event 1 -->
+            <div class="event-card">
+              <span class="event-date-badge">WEEKLY WEDNESDAYS &bull; 18:00 IST</span>
+              <h3 class="event-title">SHIELD HackNights</h3>
+              <p class="event-desc">
+                Live interactive walkthroughs on Hack The Box and TryHackMe machines, binary exploitation labs, and vulnerability discussions with society leads.
+              </p>
+              <div class="event-meta">
+                <span class="event-location">Computer Center / Discord</span>
+                <span>All Semesters</span>
+              </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="event-card">
+              <span class="event-date-badge">FLAGSHIP ANNUAL &bull; 48 HOURS</span>
+              <h3 class="event-title">NIT Hamirpur CTF</h3>
+              <p class="event-desc">
+                Our national-tier jeopardy CTF competition featuring challenges authored across all 8 domains: Reverse Engineering, Web, Crypto, Forensics, and Pwn.
+              </p>
+              <div class="event-meta">
+                <span class="event-location">Online &bull; Global</span>
+                <span>Prizes &amp; Hall of Fame</span>
+              </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="event-card">
+              <span class="event-date-badge">UPCOMING BOOTCAMP &bull; WEEKEND</span>
+              <h3 class="event-title">Web Security &amp; Bug Bounty 101</h3>
+              <p class="event-desc">
+                From finding your first reflected XSS to scoring verified CVEs and responsible disclosure rewards. Hands-on testing on deliberately vulnerable lab machines.
+              </p>
+              <div class="event-meta">
+                <span class="event-location">NIT Hamirpur Auditorium</span>
+                <span>Beginners Welcome</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Banner -->
+      <section class="cta-banner-section">
+        <div class="container">
+          <div class="cta-banner-card">
+            <h2 class="cta-title">Ready to Defend the Digital Frontier?</h2>
+            <p class="cta-subtitle">
+              Whether you are completely new to command-line tools or already hunting zero-days, SHIELD Cyber Society is your launchpad at NIT Hamirpur.
+            </p>
+            <button class="btn-cyber-solid trigger-join-dialog" style="font-size: 0.95rem; padding: 0.85rem 2rem;">
+              Initiate Membership Registration
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#hero" class="brand-link">
+              <div class="shield-logo-wrap" style="width:36px; height:40px;">
+                <img src="assets/shield-logo.svg" alt="SHIELD Emblem" width="36" height="40">
+              </div>
+              <div class="brand-text">
+                <span class="brand-name" style="font-size: 1.25rem;">SHIELD</span>
+                <span class="brand-tag">NIT HAMIRPUR</span>
+              </div>
+            </a>
+            <p>
+              The student-led cybersecurity &amp; ethical hacking society of National Institute of Technology Hamirpur (HP), India.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="#about">About Society</a></li>
+              <li><a href="#pillars">Four Pillars</a></li>
+              <li><a href="#domains">Core Domains</a></li>
+              <li><a href="#terminal">Cyber Terminal</a></li>
+              <li><a href="#ctf">CTF Challenge</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Specializations</h4>
+            <ul class="footer-links">
+              <li><a href="#domains">Network Security</a></li>
+              <li><a href="#domains">Web App Security</a></li>
+              <li><a href="#domains">Digital Forensics</a></li>
+              <li><a href="#domains">Malware Analysis</a></li>
+              <li><a href="#domains">Offensive Security</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Connect</h4>
+            <ul class="footer-links">
+              <li><a href="https://github.com/Ansh-grows/SHIELD" target="_blank" rel="noopener">GitHub Repository</a></li>
+              <li><a href="https://nith.ac.in" target="_blank" rel="noopener">NIT Hamirpur Portal</a></li>
+              <li><a href="#" class="trigger-join-dialog">Discord Community</a></li>
+              <li><a href="#" class="trigger-join-dialog">Contact Leads</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copy">
+            &copy; 2026 SHIELD Cyber Society &bull; National Institute of Technology Hamirpur. All Rights Reserved.
+          </div>
+          <div class="footer-telemetry-tag">
+            <span class="status-beacon"></span>
+            <span>SYSTEMS: SECURE // LEARN &bull; BUILD &bull; COLLABORATE &bull; DEFEND</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Join SHIELD Modal Dialog -->
+  <dialog id="join-dialog" class="cyber-dialog">
+    <div class="dialog-header">
+      <div class="dialog-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <span>JOIN SHIELD CYBER SOCIETY</span>
+      </div>
+      <button id="dialog-close" class="dialog-close-btn" aria-label="Close dialog">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="dialog-content">
+      <p class="dialog-desc">
+        Fill out this recruit profile to join our active workshops, CTF training sessions, and society divisions at NIT Hamirpur.
+      </p>
+
+      <form id="join-form">
+        <div class="form-group">
+          <label class="form-label" for="recruit-name">FULL NAME</label>
+          <input type="text" id="recruit-name" class="form-input" placeholder="e.g. Ansh Sharma" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="recruit-email">COLLEGE EMAIL / GITHUB USERNAME</label>
+          <input type="text" id="recruit-email" class="form-input" placeholder="e.g. roll_no@nith.ac.in or @github" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="recruit-domain">PREFERRED CORE DOMAIN</label>
+          <select id="recruit-domain" class="form-select">
+            <option value="Offensive Security">Offensive Security &amp; Red Teaming</option>
+            <option value="Web App Security">Web Application Security</option>
+            <option value="Network Security">Network Security &amp; Architecture</option>
+            <option value="Cryptography">Cryptography &amp; Cryptanalysis</option>
+            <option value="Digital Forensics">Digital Forensics &amp; Incident Response</option>
+            <option value="Malware Analysis">Malware Analysis &amp; Reverse Engineering</option>
+            <option value="Cloud Analysis">Cloud Security &amp; Forensics</option>
+            <option value="Security Operations">Security Operations (SOC / Blue Team)</option>
+            <option value="Undecided">Undecided / Curious Beginner</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="recruit-experience">CURRENT EXPERIENCE LEVEL</label>
+          <select id="recruit-experience" class="form-select">
+            <option value="beginner">Beginner (Curious, eager to learn)</option>
+            <option value="intermediate">Intermediate (Solved CTFs / Linux familiar)</option>
+            <option value="advanced">Advanced (Bug hunter / binary reverser)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-cyber-solid" style="width: 100%; justify-content: center; margin-top: 1rem;">
+          Submit Application
+        </button>
+      </form>
+
+      <div class="community-links-box">
+        <span>Direct Comms:</span>
+        <div class="social-chips">
+          <a href="https://github.com/Ansh-grows/SHIELD" target="_blank" rel="noopener" class="social-chip">GitHub</a>
+          <a href="#" class="social-chip">Discord</a>
+          <a href="#" class="social-chip">Telegram</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/terminal.js"></script>
+</body>
+</html>
